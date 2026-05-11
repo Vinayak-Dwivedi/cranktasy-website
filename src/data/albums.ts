@@ -33,10 +33,10 @@ export const albums: Album[] = [
     releaseDate: 'April 20, 2024', 
     genre: 'Electronic / Synthwave',
     credits: [
-      { role: 'Music / Composer / Lyrics / Rap', name: 'CrankTasy' },
-      { role: 'Singer', name: 'Shivam K Mishra' },
-      { role: 'Mix / Master & Post Production', name: 'JCD Production' },
-      { role: 'Visuals', name: 'CheesyParantha' }
+      { role: 'Music/Lyrics/Composition/Rap', name: 'CrankTasy' },
+      { role: 'Vocals', name: 'Shivam K Mishra' },
+      { role: 'Mix/Master & Post Production', name: 'JCD Production' },
+      { role: 'Visuals', name: 'AyeChirag | Anedya Art | Infinity3d.s | Mnvshr' }
     ]
   },
 ]

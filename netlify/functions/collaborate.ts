@@ -12,6 +12,11 @@ const ipCache: Record<string, number> = {};
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
 const MAX_REQUESTS = 5;
 
+// Validate setup
+if (!process.env.RESEND_API_KEY) {
+  console.warn('Warning: RESEND_API_KEY is not set in environment variables');
+}
+
 export const handler: Handler = async (event, context) => {
   // Only allow POST
   if (event.httpMethod !== 'POST') {
@@ -23,15 +28,12 @@ export const handler: Handler = async (event, context) => {
 
   const clientIp = event.headers['x-nf-client-connection-ip'] || event.headers['client-ip'] || 'unknown';
   
-  // Basic Rate Limiting
-  const now = Date.now();
-  if (!ipCache[clientIp]) {
-    ipCache[clientIp] = now;
-  } else {
-    // If multiple requests in a short time, we could implement a counter, 
-    // but for simple spam prevention, we just check last request time.
-    // However, serverless functions are ephemeral, so this is just a minor hurdle for attackers.
-    // For a real app, Upstash Redis would be better.
+  // Check for API key at runtime
+  if (!process.env.RESEND_API_KEY) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Server Configuration Error: Missing API Key' }),
+    };
   }
 
   try {
@@ -90,7 +92,10 @@ export const handler: Handler = async (event, context) => {
     console.error('Function Error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Internal Server Error' }),
+      body: JSON.stringify({ 
+        error: error instanceof Error ? error.message : 'Internal Server Error',
+        details: 'Check server logs for more information'
+      }),
     };
   }
 };

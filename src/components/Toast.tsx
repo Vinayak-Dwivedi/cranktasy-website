@@ -23,10 +23,10 @@ export default function Toast({ message, type, isVisible, onClose }: ToastProps)
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
-          className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[1000] min-w-[300px]"
+          initial={{ opacity: 0, y: 50, scale: 0.9, x: '-50%' }}
+          animate={{ opacity: 1, y: 0, scale: 1, x: '-50%' }}
+          exit={{ opacity: 0, scale: 0.9, x: '-50%', transition: { duration: 0.2 } }}
+          className="fixed bottom-10 left-1/2 z-[1000] min-w-[300px]"
         >
           <div className="logo-gradient-container rounded-2xl p-[1px] shadow-2xl">
             <div className="bg-[#0a0a0a]/95 backdrop-blur-md rounded-[15px] px-6 py-4 flex items-center gap-4 border border-white/5">

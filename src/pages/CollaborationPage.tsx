@@ -29,7 +29,7 @@ export default function CollaborationPage() {
   })
 
   const validateEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)
   }
 
   const handleSubmit = async (e: React.MouseEvent) => {
@@ -40,7 +40,7 @@ export default function CollaborationPage() {
       setToast({ message: 'Please enter your name', type: 'error', isVisible: true })
       return
     }
-    if (!validateEmail(form.email)) {
+    if (!validateEmail(form.email.trim())) {
       setToast({ message: 'Please enter a valid email address', type: 'error', isVisible: true })
       return
     }
