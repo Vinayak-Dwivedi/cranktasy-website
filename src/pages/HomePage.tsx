@@ -16,7 +16,7 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
         
         {/* Title Group */}
         <div className="text-center animate-fade-up shrink-0">
-          <h1 className="discography-heading text-[18vw] sm:text-[14vw] md:text-[110px] leading-[0.85] mb-1 md:mb-2 filter brightness-110 block text-center">
+          <h1 className="discography-heading text-[16vw] sm:text-[14vw] md:text-[110px] leading-[0.85] mb-1 md:mb-2 filter brightness-110 block text-center">
             COSMIC NIGHT
           </h1>
           <p className="font-mono-custom text-[clamp(10px,1.5vh,16px)] tracking-[0.4em] uppercase text-[#cccccc] opacity-80 text-md">
@@ -25,13 +25,13 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
         </div>
 
         {/* Visualizer */}
-        <div className="animate-fade-up delay-100 flex items-center justify-center">
-          <Waveform bars={12} height="h-[clamp(24px,4vh,40px)]" barClassName="logo-gradient-bg" />
+        <div className="animate-fade-up delay-100 flex items-center justify-center shrink-0">
+          <Waveform bars={12} height="h-[clamp(24px,3.5vh,40px)]" barClassName="logo-gradient-bg" />
         </div>
 
         {/* Album Art Section (New Poster) */}
         <div className="relative group animate-fade-up delay-200 shrink-0">
-          <div className="relative z-10 w-[clamp(220px,40dvh,600px)] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+          <div className="relative z-10 w-[clamp(280px,88vw,45dvh)] md:w-[320px] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
             <img 
               src="/Gemini_Generated_Image_ubi2obubi2obubi2.png" 
               alt="Cosmic Night Poster" 

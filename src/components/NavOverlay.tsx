@@ -32,7 +32,7 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
         <div className="flex-1 flex flex-col items-center justify-center gap-[86px] md:gap-4">
           <button
             onClick={() => onNavigate('disco')}
-            className={`font-heading-stack text-[68px] sm:text-[86px] md:text-[120px] leading-[0.85] tracking-[0.02em] text-center uppercase transition-all duration-300 w-full ${
+            className={`font-heading-stack text-[48px] sm:text-[68px] md:text-[86px] leading-[0.85] tracking-[0.02em] text-center uppercase transition-all duration-300 w-full ${
               currentPage === 'disco' ? 'discography-heading' : 'text-white/40 hover:text-white/60'
             }`}
           >
@@ -40,7 +40,7 @@ export default function NavOverlay({ open, currentPage, onNavigate, onClose: _on
           </button>
           <button
             onClick={() => onNavigate('collab')}
-            className={`font-heading-stack text-[68px] sm:text-[86px] md:text-[120px] leading-[0.85] tracking-[0.02em] text-center uppercase transition-all duration-300 w-full ${
+            className={`font-heading-stack text-[48px] sm:text-[68px] md:text-[86px] leading-[0.85] tracking-[0.02em] text-center uppercase transition-all duration-300 w-full ${
               currentPage === 'collab' ? 'discography-heading' : 'text-white/40 hover:text-white/60'
             }`}
           >
