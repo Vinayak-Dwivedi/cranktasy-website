@@ -128,7 +128,7 @@ export function CosmicArt() {
   return (
     <div className="w-full h-full relative overflow-hidden bg-black">
       <img 
-        src="/Gemini_Generated_Image_ubi2obubi2obubi2.png" 
+        src="/cosmic.nightt.jpg" 
         alt="Cosmic Night" 
         className="w-full h-full object-cover"
       />
