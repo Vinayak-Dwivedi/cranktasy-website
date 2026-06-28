@@ -59,7 +59,7 @@ export default function CollaborationPage() {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: "463a2e04-6fe8-4166-a22d-5436ea5e28ec",
+          access_key: "f7e58735-b809-40b3-81e0-eec00494b507",
           name: form.name,
           email: form.email,
           message: form.description,
