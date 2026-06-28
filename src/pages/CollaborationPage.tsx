@@ -52,12 +52,14 @@ export default function CollaborationPage() {
     setLoading(true)
 
     try {
-      const response = await fetch('/api/collaborate', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
+          access_key: "463a2e04-6fe8-4166-a22d-5436ea5e28ec",
           name: form.name,
           email: form.email,
           message: form.description,
