@@ -144,14 +144,14 @@ export default function DiscographyPage() {
                   {/* Close Button */}
                 <button 
                   onClick={() => setSelectedTrack(null)}
-                  className="absolute top-4 right-4 text-[#888] hover:text-white transition-colors z-[210] p-2 hover:bg-white/5 rounded-full"
+                  className="absolute top-4 right-4 text-[#ccc] hover:text-white transition-colors z-[210] p-2 hover:bg-white/5 rounded-full"
                 >
                   <IoClose className="w-8 h-8 md:w-6 md:h-6" />
                 </button>
 
                 {/* Hero Art */}
                 <div className="flex items-center justify-center">
-                <div className="w-full aspect-square max-w-[320px] mx-auto lg:mx-0 bg-[#050505] rounded-xl overflow-hidden mb-6 lg:mb-8 border border-[#1a1a1a]">
+                <div className="w-full aspect-square max-w-[320px] mx-auto lg:mx-0 bg-[#050505] rounded-xl overflow-hidden mb-6 lg:mb-8">
                   {(()=>{const BigArt = artMap[selectedTrack.artKey]; return <BigArt/>})()}
                 </div>
                  </div>
