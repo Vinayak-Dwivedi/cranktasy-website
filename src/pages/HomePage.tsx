@@ -31,7 +31,7 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
 
         {/* Album Art Section (New Poster) */}
         <div className="relative group animate-fade-up delay-200 shrink-0">
-          <div className="relative z-10 w-[clamp(280px,88vw,45dvh)] md:w-[320px] aspect-square bg-[#0d0d0d] border border-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+          <div className="relative z-10 w-[clamp(280px,88vw,45dvh)] md:w-[320px] aspect-square bg-[#0d0d0d] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
             <img 
               src="/cosmic.nightt.jpg" 
               alt="Cosmic Night Poster" 
