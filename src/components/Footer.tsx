@@ -2,13 +2,13 @@ import { FaSpotify, FaYoutube, FaInstagram, FaFacebookF, FaRegCopyright } from '
 import { SiApplemusic, SiGmail, SiX } from 'react-icons/si'
 
 const socials = [
-  { id: 'spotify', Icon: FaSpotify },
-  { id: 'applemusic', Icon: SiApplemusic },
-  { id: 'youtube', Icon: FaYoutube },
-  { id: 'instagram', Icon: FaInstagram },
-  { id: 'x', Icon: SiX },
-  { id: 'facebook', Icon: FaFacebookF },
-  { id: 'gmail', Icon: SiGmail },
+  { id: 'spotify', Icon: FaSpotify, url: 'https://open.spotify.com/artist/5x77VfVGAxtyv3ecJNzuSi?si=4UwMbAwsSGefPAnKG2alhg' },
+  { id: 'applemusic', Icon: SiApplemusic, url: 'https://itunes.apple.com/us/artist/cranktasy/6781806828' },
+  { id: 'youtube', Icon: FaYoutube, url: 'https://www.youtube.com/@CrankTasy' },
+  { id: 'instagram', Icon: FaInstagram, url: 'https://www.instagram.com/cranktasy' },
+  { id: 'x', Icon: SiX, url: 'https://x.com/cranktasy' },
+  { id: 'facebook', Icon: FaFacebookF, url: 'https://www.facebook.com/cranktasy' },
+  { id: 'gmail', Icon: SiGmail, url: 'mailto:work.cranktasy@gmail.com' },
 ]
 
 export default function Footer() {
@@ -26,10 +26,12 @@ export default function Footer() {
             <stop offset="90%" stopColor="#7B88FF" />
           </linearGradient>
         </svg>
-        {socials.map(({ id, Icon }) => (
+        {socials.map(({ id, Icon, url }) => (
           <a
             key={id}
-            href="#"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
           >
             <Icon style={{ fill: "url(#footerIconGradient)" }} className="w-5 h-5 sm:w-5 sm:h-5 hover:scale-110 transition-transform" />

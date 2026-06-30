@@ -49,15 +49,15 @@ export default function HomePage({ onNavigate: _onNavigate }: HomePageProps) {
               <stop offset="100%" stopColor="#a0a0a0" />
             </linearGradient>
           </svg>
-          <button className="hover:opacity-70 transition-opacity group">
+          <a href="https://open.spotify.com/track/1ec54RSdQQ7SIsEwWqKyXs?si=Inc1bNOZQk6H8K4NoOm2zg" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity group">
             <FaSpotify style={{ fill: "url(#iconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
-          </button>
-          <button className="hover:opacity-70 transition-opacity group">
+          </a>
+          <a href="http://itunes.apple.com/album/id/6782072831" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity group">
             <SiApplemusic style={{ fill: "url(#iconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
-          </button>
-          <button className="hover:opacity-70 transition-opacity group">
+          </a>
+          <a href="https://youtu.be/nd3SMjLfq5w?si=_f-qK4ROBgNr411n" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity group">
             <FaYoutube style={{ fill: "url(#iconGradient)" }} className="w-[clamp(24px,4vh,32px)] h-[clamp(24px,4vh,32px)] group-hover:scale-110 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
 
